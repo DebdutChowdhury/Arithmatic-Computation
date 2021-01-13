@@ -1,3 +1,5 @@
 #!/bin/bash
 
-# Welcome to Arithmetic Computstion problem
+read -p "Enter the number of a: " a
+read -p "Enter the number of b: " b
+read -p "Enter the number of c: " c
