@@ -26,5 +26,38 @@ do
 	arr[$((count++))]="$i"
 done
 
-echo ${!arr[@]}
+echo ${arr[@]}
+
+len=${#arr[@]}
+temp=0
+i=1
+while (( i<=len ))
+do
+	for ((j = 0; j<len-1; j++))
+
+   	 do
+
+
+
+		 if (( ${arr[j]}<${arr[$((j+1))]} ))
+
+        	then
+
+            	# swap
+
+            	temp=${arr[j]}
+
+            	arr[$j]=${arr[$((j+1))]}
+
+            	arr[$((j+1))]=$temp
+
+        	fi
+
+    	done
+    	((i++))
+done
+
+
+
+echo "Array in sorted order :"              
 echo ${arr[@]}
