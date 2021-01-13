@@ -1,8 +1,9 @@
-#!/bin/bash -x
+#!/bin/bash
 
 declare -A return
 
 case=1
+count=0
 
 read -p "Enter the number of a: " a
 read -p "Enter the number of b: " b
@@ -20,5 +21,10 @@ return[$((case++))]="$compute_02"
 return[$((case++))]="$compute_03"
 return[$((case++))]="$compute_04"
 
-echo cases: ${!return[@]}
-echo value: ${return[@]}
+for i in ${return[@]}
+do
+	arr[$((count++))]="$i"
+done
+
+echo ${!arr[@]}
+echo ${arr[@]}
